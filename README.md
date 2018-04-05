@@ -55,7 +55,7 @@ Code mostly speaks for itself. However, there are a few points that you should r
 
 This project is licensed under the GPL v3 License - see the [LICENSE.md](LICENSE.md) file for details.
 
-##Changelog
+## Changelog
 
 **1.2.0**
 * `README.md`, `LICENSE.md`
