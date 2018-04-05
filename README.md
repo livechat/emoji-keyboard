@@ -1,6 +1,6 @@
 # LiveChat Emoji Keyboard
 
-Agent App Widget for Emoji Keyboard in LiveChat app.
+Agent App Widget for Emoji Keyboard in the LiveChat app.
 
 ## Getting Started
 
@@ -8,7 +8,7 @@ Remember that this project is available as a public app in LiveChat marketplace.
 
 ### Prerequisites
 
-Emoji Keyboard is front-end app only, so you don’t need back-end server to run it. We use `npm` manager to include and install modules. [Here is how to install npm](https://www.npmjs.com/get-npm).
+Emoji Keyboard is a front-end app only, so you don’t need back-end server to run it. We use `npm` manager to include and install modules. [Here is how to install npm](https://www.npmjs.com/get-npm).
 
 The project also uses `SASS` as stylesheets pre-processor. [Here is how to install it](https://sass-lang.com/install).
 
