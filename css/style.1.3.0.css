@@ -3,10 +3,22 @@ body {
   padding: 0 50px 85px 10px;
   max-width: 100%; }
 
+.app__loading {
+  margin-top: calc( 50% - 100px); }
+
 .emoji-set {
+  display: none;
   text-align: left; }
 
+.emoji-unsupported {
+  display: none;
+  text-align: center;
+  font-size: 2em;
+  margin: calc( 50% - 2em) 0 0;
+  padding: 0 2em; }
+
 .chat-plugin__menu {
+  display: none;
   position: fixed;
   bottom: 0;
   top: 0;
@@ -217,4 +229,4 @@ body {
 .tooltip-min:after, .tooltip-min[data-tooltip]:after {
   min-width: 110px; }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.1.2.1.css.map */

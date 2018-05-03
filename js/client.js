@@ -5,7 +5,8 @@ const LiveChat = require('@livechat/agent-app-widget-sdk'),
 window.EmojiKeyboard = {
 
     printEmojiCategory: function(emojisObject, category) {
-        let elementID = category.toLowerCase();
+        let elementID = category.toLowerCase(),
+            anyEmojiSupported = 0;
         $('.emoji-set').append('<p class="emoji-category" id="' + elementID + '"><span class="emoji-header">' + category + '</span></p>');
         $.each(emojisObject[category], function () {
             let unified = this.unified;
@@ -15,9 +16,13 @@ window.EmojiKeyboard = {
                 dec.push(parseInt(this, 16));
             });
             let emoji = String.fromCodePoint.apply(this, dec);
-            if (ifemoji(emoji))
+            if (ifemoji(emoji)) {
                 $('#' + elementID).append('<span class="emoji-single" data-emoji-code="' + emoji + '">' + emoji + '</span>');
+                anyEmojiSupported++;
+            }
         });
+        if(anyEmojiSupported === 0)
+            $("#"+elementID).remove();
     },
 
     init: function () {
@@ -57,6 +62,14 @@ window.EmojiKeyboard = {
             EmojiKeyboard.printEmojiCategory(emojis, index);
         });
 
+        if($('.emoji-category').length === 0) {
+            $('.emoji-unsupported').show();
+            $('.chat-plugin__menu').remove();
+        } else {
+            $('.chat-plugin__menu, .emoji-set').show();
+        }
+
+        $('.app__loading').hide();
 
     }
 };
