@@ -27,7 +27,7 @@ And that's all! Now you have own fully functional fork of Emoji Keyboard 😎
 Code mostly speaks for itself. However, there are a few points that you should remember about:
 * as LiveChat Agent App Widget SDK is loaded via `npm`, it is more convenient for development process to use node.js packages only
 * to run `npm` packages on visitor’s end, we use a tool called `browserify` and create the `bundle.js` file
-* for production builds we minify JS code using the `tinyify` plugin for `browserify` 
+* for production builds we minify JS code using the `tinyify` plugin and `babelify` for compatibility with ES5  
 
 ## Built With
 
@@ -38,6 +38,7 @@ Code mostly speaks for itself. However, there are a few points that you should r
 * [jquery-browserify](https://www.npmjs.com/package/jquery-browserify)
 * [if-emoji](https://www.npmjs.com/package/if-emoji)
 * [emoji-data.json](https://github.com/iamcal/emoji-data)
+* [babelify](https://github.com/babel/babelify)
 
 ## Contributing
 
@@ -49,13 +50,18 @@ Code mostly speaks for itself. However, there are a few points that you should r
 3. When your code is developed and tested remember to:
     - bump version in `package.json`
     - bump version for `emojis.js` and `style.scss/style.css` (also inside `index.html` file)
-    - run `browserify -p tinyify client.js -o bundle.X.X.X.js` command, where `X.X.X` is the new version
+    - run `browserify -p tinyify js/client.js -o js/bundle.X.X.X.js -t [ babelify --presets [ "babel-preset-env"] ]` command, where `X.X.X` is the new version
 
 ## License
 
 This project is licensed under the GPL v3 License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Changelog
+
+**1.3.0**
+* Added support for ES5 with `babelify`
+* Added visual callback if emojis are not supported
+* Minor fixes
 
 **1.2.0**
 * `README.md`, `LICENSE.md`
