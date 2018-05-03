@@ -58,7 +58,7 @@ This project is licensed under the GPL v3 License - see the [LICENSE.md](LICENSE
 
 ## Changelog
 
-**1.3.0**
+**1.3.1**
 * Added support for ES5 with `babelify`
 * Added visual callback if emojis are not supported
 * Minor fixes

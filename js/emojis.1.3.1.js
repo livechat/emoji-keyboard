@@ -1,4 +1,4 @@
-const emojis = {
+var emojis = {
     "People": [
         {
             "name": "GRINNING FACE",
