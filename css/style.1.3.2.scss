@@ -5,7 +5,7 @@ body {
 }
 
 .app__loading {
-  margin-top: calc( 50% - 100px);
+  margin-top: 50%;
 }
 
 .emoji-set {
@@ -17,8 +17,13 @@ body {
   display: none;
   text-align: center;
   font-size: 2em;
-  margin: calc( 50% - 2em) 0 0;
+  margin: 50% 0 0;
   padding: 0 2em;
+
+  a {
+    color: #4183c4;
+    text-decoration: none;
+  }
 }
 
 .chat-plugin__menu {
