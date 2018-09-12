@@ -1,8 +1,13 @@
 const LiveChat = require('@livechat/agent-app-widget-sdk'),
     $ = require('jquery-browserify'),
-    ifemoji = require('if-emoji');
+    ifemoji = require('if-emoji'),
+    parser = require('ua-parser-js');
 
 window.EmojiKeyboard = {
+
+    checkOS: function(ua) {
+        return parser(ua).getOS();
+    },
 
     printEmojiCategory: function(emojisObject, category) {
         let elementID = category.toLowerCase(),
@@ -26,6 +31,8 @@ window.EmojiKeyboard = {
     },
 
     init: function () {
+        console.log(this.checkOS(navigator.userAgent));
+
         LiveChat.init({
             authorization: false
         });

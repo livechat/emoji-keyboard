@@ -29,7 +29,7 @@ Code mostly speaks for itself. However, there are a few points that you should r
 * to run `npm` packages on visitor’s end, we use a tool called `browserify` and create the `bundle.js` file
 * for production builds we minify JS code using the `tinyify` plugin and `babelify` for compatibility with ES5  
 
-## Built With
+## Built with
 
 * [SASS](https://sass-lang.com/)
 * [npm](https://www.npmjs.com/)
@@ -39,6 +39,7 @@ Code mostly speaks for itself. However, there are a few points that you should r
 * [if-emoji](https://www.npmjs.com/package/if-emoji)
 * [emoji-data.json](https://github.com/iamcal/emoji-data)
 * [babelify](https://github.com/babel/babelify)
+* [ua-parser-js](https://github.com/faisalman/ua-parser-js)
 
 ## Contributing
 
@@ -57,6 +58,9 @@ Code mostly speaks for itself. However, there are a few points that you should r
 This project is licensed under the GPL v3 License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Changelog
+
+**1.3.2**
+* show OS Support link if emojis are not supported
 
 **1.3.1**
 * Added support for ES5 with `babelify`
