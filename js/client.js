@@ -1,8 +1,13 @@
 const LiveChat = require('@livechat/agent-app-widget-sdk'),
     $ = require('jquery-browserify'),
-    ifemoji = require('if-emoji');
+    ifemoji = require('if-emoji'),
+    parser = require('ua-parser-js');
 
 window.EmojiKeyboard = {
+
+    getOS: function(ua) {
+        return new parser(ua).getOS().name.toLowerCase().replace(/\W/, '');
+    },
 
     printEmojiCategory: function(emojisObject, category) {
         let elementID = category.toLowerCase(),
@@ -58,11 +63,26 @@ window.EmojiKeyboard = {
             });
         });
 
-        $.each(emojis, function (index, value) {
+        $.each(emojis, function (index) {
             EmojiKeyboard.printEmojiCategory(emojis, index);
         });
 
         if($('.emoji-category').length === 0) {
+            const OS = this.getOS(navigator.userAgent);
+            let link;
+            switch (OS) {
+                case 'windows':
+                    link = 'http://caniemoji.com/microsoft-windows/';
+                    break;
+                case 'macos':
+                    link = 'http://caniemoji.com/os-x/';
+                    break;
+                default:
+                    link = 'http://caniemoji.com/';
+                    break;
+            }
+
+            $('#os-support').attr('href', link);
             $('.emoji-unsupported').show();
             $('.chat-plugin__menu').remove();
         } else {

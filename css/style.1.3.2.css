@@ -4,7 +4,7 @@ body {
   max-width: 100%; }
 
 .app__loading {
-  margin-top: calc( 50% - 100px); }
+  margin-top: 50%; }
 
 .emoji-set {
   display: none;
@@ -14,8 +14,11 @@ body {
   display: none;
   text-align: center;
   font-size: 2em;
-  margin: calc( 50% - 2em) 0 0;
+  margin: 50% 0 0;
   padding: 0 2em; }
+  .emoji-unsupported a {
+    color: #4183c4;
+    text-decoration: none; }
 
 .chat-plugin__menu {
   display: none;
@@ -229,4 +232,4 @@ body {
 .tooltip-min:after, .tooltip-min[data-tooltip]:after {
   min-width: 110px; }
 
-/*# sourceMappingURL=style.1.2.1.css.map */
+/*# sourceMappingURL=style.1.3.2.css.map */
