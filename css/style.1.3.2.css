@@ -20,6 +20,9 @@ body {
     color: #4183c4;
     text-decoration: none; }
 
+.chat-plugin__content {
+  background: transparent !important; }
+
 .chat-plugin__menu {
   display: none;
   position: fixed;

@@ -26,6 +26,10 @@ body {
   }
 }
 
+.chat-plugin__content {
+  background: transparent !important;
+}
+
 .chat-plugin__menu {
   display: none;
   position: fixed;
