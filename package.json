@@ -1,6 +1,6 @@
 {
   "name": "emoji-keyboard",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "",
   "main": "js/ignore.client.js",
   "dependencies": {

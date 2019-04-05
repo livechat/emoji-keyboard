@@ -59,6 +59,9 @@ This project is licensed under the GPL v3 License - see the [LICENSE.md](LICENSE
 
 ## Changelog
 
+**1.3.3**
+* adjust widget styles to the new LiveChat Agent App design
+
 **1.3.2**
 * show OS Support link if emojis are not supported
 
