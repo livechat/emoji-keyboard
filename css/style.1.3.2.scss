@@ -2,6 +2,7 @@ body {
   font: 14px 'Lato', Arial, sans-serif;
   padding: 0 50px 85px 10px;
   max-width: 100%;
+  background-color: #f3f7f9;
 }
 
 .app__loading {
@@ -27,16 +28,22 @@ body {
 }
 
 .chat-plugin__content {
-  background: transparent !important;
+  background-color: #f3f7f9;
 }
 
 .chat-plugin__menu {
+  background-color: #f3f7f9;
   display: none;
   position: fixed;
   bottom: 0;
   top: 0;
   right: 0;
   text-align: center;
+}
+
+.chat-plugin__menu__item--active {
+  border-left: 4px solid #4384f5;
+  margin-left: -4px;
 }
 
 .emoji-category {
