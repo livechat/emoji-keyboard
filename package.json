@@ -1,8 +1,8 @@
 {
   "name": "emoji-keyboard",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "",
-  "main": "js/ignore.client.js",
+  "main": "js/client.js",
   "dependencies": {
     "@livechat/agent-app-widget-sdk": "^1.3.0",
     "if-emoji": "^0.1.0",
@@ -16,9 +16,6 @@
     "browserify": "^16.1.1",
     "tinyify": "^2.4.0"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Quarties",
+  "author": "LiveChat, Inc. <integrations@livechatinc.com>",
   "license": "GPL-3.0"
 }

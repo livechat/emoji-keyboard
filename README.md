@@ -50,7 +50,7 @@ Code mostly speaks for itself. However, there are a few points that you should r
     - update/gpl-v4-license
 3. When your code is developed and tested remember to:
     - bump version in `package.json`
-    - bump version for `emojis.js` and `style.scss/style.css` (also inside `index.html` file)
+    - bump version for `style.scss/style.css` (also inside `index.html` file)
     - run `browserify -p tinyify js/client.js -o js/bundle.X.X.X.js -t [ babelify --presets [ "babel-preset-env"] ]` command, where `X.X.X` is the new version
 
 ## License
@@ -58,6 +58,9 @@ Code mostly speaks for itself. However, there are a few points that you should r
 This project is licensed under the GPL v3 License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Changelog
+
+**1.3.4**
+* app loading improvements
 
 **1.3.3**
 * adjust widget styles to the new LiveChat Agent App design
