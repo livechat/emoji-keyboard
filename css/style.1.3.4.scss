@@ -5,8 +5,10 @@ body {
   background-color: #f3f7f9;
 }
 
-.app__loading {
-  margin-top: 50%;
+#loader {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
 .emoji-set {
