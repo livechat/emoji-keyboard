@@ -55,7 +55,7 @@ window.EmojiKeyboard = {
                 authorization: false
             });
 
-            $('.emoji-set').on( "click", ".emoji-single", function() {
+            that.emojiDOM.on( "click", ".emoji-single", function() {
                 LiveChat.putMessage($(this).data('emoji-code'));
             });
 
