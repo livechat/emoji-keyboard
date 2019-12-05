@@ -15,7 +15,7 @@ window.EmojiKeyboard = {
         const that = this;
         $.each(emojis, function (category) {
 
-            $emojies = "";
+            let emojis = "";
             $.each(this, function () {
                 let unified = this.unified;
                 unified = unified.split('-');
@@ -24,12 +24,12 @@ window.EmojiKeyboard = {
                     dec.push(parseInt(this, 16));
                 });
                 let emoji = String.fromCodePoint.apply(this, dec);
-                $emojies += '<span class="emoji-single" data-emoji-code="' + emoji + '">' + emoji + '</span>';
+                emojis += `<span class="emoji-single" data-emoji-code="${emoji}">${emoji}</span>`;
             });
 
-            $emojies = '<p class="emoji-category" id="' + category.toLowerCase() + '">' + $emojies + '</span>';
+            emojis = `<p class="emoji-category" id="${category.toLowerCase()}">${emojis}</span>`;
 
-            that.emojiDOM.append($emojies);
+            that.emojiDOM.append(emojis);
         });
 
     },

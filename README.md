@@ -59,7 +59,7 @@ This project is licensed under the GPL v3 License - see the [LICENSE.md](LICENSE
 
 ## Changelog
 
-**1.3.5**
+**1.3.6**
 * more updates related to speedup the application 
 * removed time-costly validator: if-emoji
 
