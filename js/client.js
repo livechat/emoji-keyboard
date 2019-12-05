@@ -1,7 +1,6 @@
 const emojis = require('./emojis');
 const LiveChat = require('@livechat/agent-app-widget-sdk'),
     $ = require('jquery-browserify'),
-    ifemoji = require('if-emoji'),
     parser = require('ua-parser-js');
 
 window.EmojiKeyboard = {
@@ -15,13 +14,8 @@ window.EmojiKeyboard = {
     preapreEmojiKeyboard: function() {
         const that = this;
         $.each(emojis, function (category) {
-            let elementID = category.toLowerCase(),
-                anyEmojiSupported = 0;
-            const emojiCategoryDOM = $('<p>', {
-                class: 'emoji-category',
-                id: elementID,
-            });
 
+            $emojies = "";
             $.each(this, function () {
                 let unified = this.unified;
                 unified = unified.split('-');
@@ -30,20 +24,12 @@ window.EmojiKeyboard = {
                     dec.push(parseInt(this, 16));
                 });
                 let emoji = String.fromCodePoint.apply(this, dec);
-                if (ifemoji(emoji)) {
-                    emojiCategoryDOM.append($('<span>', {
-                        class: 'emoji-single',
-                        'data-emoji-code': emoji,
-                        html: emoji
-                    })); // '<span class="emoji-single" data-emoji-code="' + emoji + '">' + emoji + '</span>');
-                    anyEmojiSupported++;
-                }
+                $emojies += '<span class="emoji-single" data-emoji-code="' + emoji + '">' + emoji + '</span>';
             });
 
-            that.emojiDOM.append(emojiCategoryDOM);
+            $emojies = '<p class="emoji-category" id="' + category.toLowerCase() + '">' + $emojies + '</span>';
 
-            if (anyEmojiSupported === 0)
-                $("#" + elementID).remove();
+            that.emojiDOM.append($emojies);
         });
 
     },

@@ -59,6 +59,10 @@ This project is licensed under the GPL v3 License - see the [LICENSE.md](LICENSE
 
 ## Changelog
 
+**1.3.5**
+* more updates related to speedup the application 
+* removed time-costly validator: if-emoji
+
 **1.3.4**
 * app loading improvements
 
